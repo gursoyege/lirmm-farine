@@ -10,6 +10,6 @@ For every module, please set parameters in `module_name/common/parameters`.
 
 Fill empty folders in `module_name/resource/`. The dataset/resources used in this work can be found [here]().
 
-Then simply execute `module_name/module_name`. The undesired submodules can be commented out in `module_name/module_name`.
+Then simply execute `module_name/module_name`. The undesired submodules can be commented out in the same file.
 
 
