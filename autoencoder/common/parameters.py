@@ -6,7 +6,7 @@ test_data = "robot"
 
 #act_name = "poke"
 #act_name = "grasp"
-act_name = "fist"
+act_name = "knock"
 
 train_mean = True
 test_mean = True

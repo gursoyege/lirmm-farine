@@ -41,7 +41,6 @@ def run():
             images = glob.glob(path + "*.png")
 
         for enum,img in enumerate(images):
-            #print(enum)
             split = img.split('/')
             img = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
             img = np.expand_dims(img, axis=-1)
@@ -59,18 +58,7 @@ def run():
                     center[1] = int(loc_curr[0] + (loc_curr[2] - loc_curr[0])/2)
                     center[0] = int(loc_curr[1] + (loc_curr[3] - loc_curr[1])/2)
                     centers.append(tuple(center.copy()))
-                del centers
 
-                centers = np.load(ANNOTATION_PATH + "110621_H_fffggpppp.npy")
-                s = []
-                for c in centers:
-                    for x in range(-10,10):
-                        for y in range(-10,10):
-                            if (c[0] + x) > 0 and (c[1] + y) > 0:
-                                s.append((c[0]+x,c[1]+y))
-
-                centers = s
-                centers = list(dict.fromkeys(centers))
                 for cnt in centers:
 
                     save_path = TREE_PATH
@@ -86,7 +74,6 @@ def run():
                     
                     pred = get_pred(roi, delta, delta_res, mask, autoencoder, r_loc, r_max, D, C, R)
                     
-                    #pred = ae[act_e].predict(roi)  
                     pred = pred[0,:,:,:]
                     
                     res = roi2rimg(loc, pred, img, r_matrix, r_max)

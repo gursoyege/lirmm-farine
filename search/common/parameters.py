@@ -9,7 +9,7 @@ R = True
 dataset = "human"
 #dataset = "robot"
 
-ACTIONS = ["fist", "grasp", "poke"]
+ACTIONS = ["knock", "grasp", "poke"]
 
 IM_SIZE = (480,848)
 
@@ -24,6 +24,6 @@ DESIR_PATH = "resource/desired/"
 TREE_PATH = "output/tree/"
 MODEL_PATH = "resource/model/" + dataset + "/" + c_or_dc
 SEQUENCE_PATH = "output/sequence/"
-ANNOTATION_PATH = "resource/annotation/"
+ANNOTATION_PATH = "resource/annotation/" + dataset + "/"
 
 
