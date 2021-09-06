@@ -12,4 +12,5 @@ Fill empty folders in `module_name/resource/`. The dataset/resources used in thi
 
 Then simply execute `module_name/module_name`. The undesired submodules can be commented out in the same file.
 
+The output results will be created in `module_name/output/`
 
