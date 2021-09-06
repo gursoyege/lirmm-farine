@@ -1,4 +1,4 @@
-## Overwiew
+## Overview
 
 This repository contains the code for the paper [Can robots mold soft materials by shaping depth images ?]().
 
